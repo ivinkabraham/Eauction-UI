@@ -48,3 +48,31 @@
     flex-direction: row;
     align-items: left;
   }
+
+  .form-group{
+      padding:10px 0 0 0;
+  }
+  .bid-group{
+    padding:20px 0 0 0;
+}
+.head-align{
+    font: bold;
+    align-content: left;
+    text-align: left;
+    padding:10px 0 10px 5px;
+    background-color:darkgray;
+}
+  .bid-align{
+      font: bold;
+      align-content: center;
+      text-align: center;
+      padding:10px 0 10px 0;
+      background-color:darkgray;
+  }
+
+  .bid-item-align{
+    font: normal;
+    align-content: center;
+    text-align: center;
+    background-color:lightblue;
+}

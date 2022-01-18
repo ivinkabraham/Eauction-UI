@@ -4,16 +4,19 @@
 <div class="toolbar" role="banner">
   &nbsp;
   <img
-    width="100"
+    
+    height="60"
     alt="E-auction"
-    src="../images/logo.png"
+    src="https://media.istockphoto.com/photos/word-with-computer-mouse-picture-id543315628?k=20&m=543315628&s=612x612&w=0&h=sgE4YvSTkSRDwwCEpPfyHuPkplO0-dCWpB1AEvkZmuQ="
   />
-  <span>Fetch Details</span>
     <div class="spacer"></div>
 </div>
 
 <div class="content" role="main">
   <form>
+    <div class="row">
+      <div class="col-md-12 head-align">Fetch Details</div>
+    </div>
     <div class="form-group row">
       <label for="inputEmail3" class="col-sm-3 col-form-label">Product</label>
       <div class="col-sm-6">
@@ -25,42 +28,46 @@
       <div class="col-sm-3"> <button type="submit" class="btn btn-primary">Get</button></div>
     </div>
     <div class="form-group row">
-      <label for="inputPassword3" class="col-sm-3 col-form-label">Product Name</label>
+      <label for="lblProductName" class="col-sm-3 col-form-label">Product Name</label>
       <div class="col-sm-9">
-        <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+        <input disabled=true type="text" class="form-control" id="txtProductName">
       </div>
     </div>
     <div class="form-group row">
-      <label for="inputPassword3" class="col-sm-3 col-form-label">Short Description</label>
+      <label for="lblShortDescr" class="col-sm-3 col-form-label">Short Description</label>
       <div class="col-sm-9">
-        <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+        <input disabled=true type="text" class="form-control" id="txtShortDescr">
       </div>
     </div>
     <div class="form-group row">
-      <label for="inputPassword3" class="col-sm-3 col-form-label">Detailed Description</label>
+      <label for="lblDetailDescr" class="col-sm-3 col-form-label">Detailed Description</label>
       <div class="col-sm-9">
-        <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+        <input disabled=true type="text" class="form-control" id="txtDetailDescr">
       </div>
     </div>
     <div class="form-group row">
-      <label for="inputPassword3" class="col-sm-3 col-form-label">Category</label>
+      <label for="lblCategory" class="col-sm-3 col-form-label">Category</label>
       <div class="col-sm-9">
-        <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+        <input disabled=true type="text" class="form-control" id="txtCategory">
       </div>
     </div>
     <div class="form-group row">
-      <label for="inputPassword3" class="col-sm-3 col-form-label">Starting Price</label>
+      <label for="lblStartPrice" class="col-sm-3 col-form-label">Starting Price</label>
       <div class="col-sm-9">
-        <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+        <input disabled=true type="text" class="form-control" id="txtStartPrice">
       </div>
     </div>
     <div class="form-group row">
-      <label for="inputPassword3" class="col-sm-3 col-form-label">Bid End Date</label>
+      <label for="lblBidEndDate" class="col-sm-3 col-form-label">Bid End Date</label>
       <div class="col-sm-9">
-        <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+        <input disabled=true type="text" class="form-control" id="txtBidEndDate">
       </div>
     </div>
-    <div class="col-md-9">Bids</div>
+    <div class="bid-group row">
+    <div class="col-md-4"></div><div class="col-md-4 bid-align">Bids</div><div class="col-md-4"></div>
+    <div class="form-group"></div>
+    <div class="col-md-3 bid-item-align">Bid Amount</div><div class="col-md-3 bid-item-align">Name</div><div class="col-md-3 bid-item-align">Email</div><div class="col-md-3 bid-item-align">Mobile</div>
+  </div>
   </form>
 </div>
 <router-outlet></router-outlet>
