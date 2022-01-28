@@ -76,3 +76,29 @@
     text-align: center;
     background-color:lightblue;
 }
+
+
+.mat-select-content{
+  width:200px;
+  font-size: 10px;
+  border-radius: 1px;
+}
+
+.selectProduct{
+  padding-top: 0;
+    width:32vw;
+    height: 3.5vw;
+    vertical-align:middle ;
+    border-style:inherit;
+  background-color:grey;
+  display:inline-block;
+  overflow:hidden;
+  border-radius:7px;
+}
+.selectPanel{
+  border-radius:36px;
+  display:inline-block;
+  overflow:hidden;
+  background:#cccccc;
+  border:1px solid #cccccc;
+}

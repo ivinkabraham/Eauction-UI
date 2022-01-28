@@ -1,0 +1,7 @@
+import { Bids } from "./bids";
+import { Products } from "./products";
+
+export class BidDetails {
+    productInfo: Products;
+    bidsList: Bids[];
+}
