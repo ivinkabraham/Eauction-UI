@@ -27,12 +27,11 @@ export class AppComponent implements OnInit {
     });
   }
 
-  getBidDeatils() {
-    console.log(this.selectedProductId);
+  getBidData() {
     this.bidService.getBidDetails(this.selectedProductId).subscribe({
       next: (data) => {
         this.bidInfo = data;
-       // this.bidInfo.bidsList.sort((x:any, y:any) => x.bidAmount - y.bidAmount);
+        this.bidInfo.bidsList.sort((x:any, y:any) => x.bidAmount - y.bidAmount);
       },
       error: (err) => { },
       complete: () => { }

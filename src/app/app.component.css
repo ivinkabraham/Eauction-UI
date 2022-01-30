@@ -61,6 +61,7 @@
     text-align: left;
     padding:10px 0 10px 5px;
     background-color:darkgray;
+    border-radius: 4px;
 }
   .bid-align{
       font: bold;
@@ -68,9 +69,10 @@
       text-align: center;
       padding:10px 0 10px 0;
       background-color:darkgray;
+      border-radius: 4px;
   }
 
-  .bid-item-align{
+  .bid-item-header{
     font: normal;
     align-content: center;
     text-align: center;
@@ -101,4 +103,17 @@
   overflow:hidden;
   background:#cccccc;
   border:1px solid #cccccc;
+}
+.bid-item-data{
+  font: normal;
+  align-content: left;
+  text-align: left;
+  background-color:whitesmoke;
+  border: violet;
+}
+.col-form-label
+{
+  font: bold;
+  align-content: left;
+  text-align: left;
 }

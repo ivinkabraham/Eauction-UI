@@ -26,49 +26,57 @@
       </mat-form-field>
       
       </div>
-      <div class="col-sm-3"> <button type="submit" class="btn btn-primary" [disabled]="!selectedProductId" (click)="getBidDeatils()">Get</button></div>
+      <div class="col-sm-3"> <button type="button" class="btn btn-primary" [disabled]="!selectedProductId" (click)="getBidData()">Get</button></div>
     </div>
+    <div *ngIf="bidInfo">
     <div class="form-group row">
       <label for="lblProductName" class="col-sm-3 col-form-label">Product Name</label>
       <div class="col-sm-9">
-        <input disabled=true type="text" class="form-control" id="txtProductName">
+        <input disabled=true type="text" value="{{bidInfo.productInfo.productName}}" class="form-control" id="txtProdName">
       </div>
     </div>
     <div class="form-group row">
       <label for="lblShortDescr" class="col-sm-3 col-form-label">Short Description</label>
       <div class="col-sm-9">
-        <input disabled=true type="text" class="form-control" id="txtShortDescr">
+        <input disabled=true type="text" value="{{bidInfo.productInfo.shortDescription}}" class="form-control" id="txtShortDescr">
       </div>
     </div>
     <div class="form-group row">
       <label for="lblDetailDescr" class="col-sm-3 col-form-label">Detailed Description</label>
       <div class="col-sm-9">
-        <input disabled=true type="text" class="form-control" id="txtDetailDescr">
+        <input disabled=true type="text" value="{{bidInfo.productInfo.detailedDescription}}" class="form-control" id="txtDetailDescr">
       </div>
     </div>
     <div class="form-group row">
       <label for="lblCategory" class="col-sm-3 col-form-label">Category</label>
       <div class="col-sm-9">
-        <input disabled=true type="text" class="form-control" id="txtCategory">
+        <input disabled=true type="text" value="{{bidInfo.productInfo.category}}" class="form-control" id="txtCategory">
       </div>
     </div>
     <div class="form-group row">
       <label for="lblStartPrice" class="col-sm-3 col-form-label">Starting Price</label>
       <div class="col-sm-9">
-        <input disabled=true type="text" class="form-control" id="txtStartPrice">
+        <input disabled=true type="text" value="{{bidInfo.productInfo.startingPrice}}" class="form-control" id="txtStartPrice">
       </div>
     </div>
     <div class="form-group row">
       <label for="lblBidEndDate" class="col-sm-3 col-form-label">Bid End Date</label>
       <div class="col-sm-9">
-        <input disabled=true type="text" class="form-control" id="txtBidEndDate">
+        <input disabled=true type="text" value="{{bidInfo.productInfo.bidEndDate}}" class="form-control" id="txtBidEndDate">
       </div>
     </div>
     <div class="bid-group row">
     <div class="col-md-4"></div><div class="col-md-4 bid-align">Bids</div><div class="col-md-4"></div>
     <div class="form-group"></div>
-    <div class="col-md-3 bid-item-align">Bid Amount</div><div class="col-md-3 bid-item-align">Name</div><div class="col-md-3 bid-item-align">Email</div><div class="col-md-3 bid-item-align">Mobile</div>
+    <div class="col-sm-3 bid-item-header">Bid Amount</div><div class="col-md-3 bid-item-header">Name</div><div class="col-md-3 bid-item-header">Email</div><div class="col-md-3 bid-item-header">Mobile</div>
+    <div class="row" *ngFor="let bid of bidInfo.bidsList">
+      <div class="col-md-3 bid-item-data">{{bid.bidAmount}}</div>&nbsp;
+      <div class="col-md-3 bid-item-data">{{bid.firstName}} {{bid.lastName}}</div>&nbsp;
+      <div class="col-md-3 bid-item-data text-break">{{bid.email}}</div>&nbsp;
+      <div class="col-md-3 bid-item-data text-break">{{bid.phone}}</div>
   </div>
+  </div>
+</div>
   </form>
 </div>
 <router-outlet></router-outlet>
