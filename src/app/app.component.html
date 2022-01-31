@@ -68,11 +68,11 @@
     <div class="bid-group row">
     <div class="col-md-4"></div><div class="col-md-4 bid-align">Bids</div><div class="col-md-4"></div>
     <div class="form-group"></div>
-    <div class="col-sm-3 bid-item-header">Bid Amount</div><div class="col-md-3 bid-item-header">Name</div><div class="col-md-3 bid-item-header">Email</div><div class="col-md-3 bid-item-header">Mobile</div>
-    <div class="row" *ngFor="let bid of bidInfo.bidsList">
-      <div class="col-md-3 bid-item-data">{{bid.bidAmount}}</div>&nbsp;
-      <div class="col-md-3 bid-item-data">{{bid.firstName}} {{bid.lastName}}</div>&nbsp;
-      <div class="col-md-3 bid-item-data text-break">{{bid.email}}</div>&nbsp;
+    <div class="col-md-3 bid-item-header">Bid Amount</div><div class="col-md-3 bid-item-header">Name</div><div class="col-md-3 bid-item-header">Email</div><div class="col-md-3 bid-item-header">Mobile</div>
+    <div class="row" *ngFor="let bid of bidInfo.bidList">
+      <div class="col-md-3 bid-item-data">{{bid.bidAmount}}</div>
+      <div class="col-md-3 bid-item-data">{{bid.firstName}} {{bid.lastName}}</div>
+      <div class="col-md-3 bid-item-data text-break">{{bid.email}}</div>
       <div class="col-md-3 bid-item-data text-break">{{bid.phone}}</div>
   </div>
   </div>
