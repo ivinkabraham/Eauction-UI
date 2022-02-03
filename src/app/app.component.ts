@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
     this.bidService.getBidDetails(this.selectedProductId).subscribe({
       next: (data) => {
         this.bidInfo = data;
-        this.bidInfo.bidsList.sort((x:any, y:any) => x.bidAmount - y.bidAmount);
+        this.bidInfo.bidList.sort((x:any, y:any) => y.bidAmount - x.bidAmount);
       },
       error: (err) => { },
       complete: () => { }
