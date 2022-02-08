@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  sellerbaseUrl:"https://eauctionsellermicroservice.azurewebsites.net/e-auction/api/v1/Seller/"
+  sellerbaseUrl:"https://eauctionapi.azure-api.net/sellermanagement/e-auction/api/v1/Seller/"
 };
 
 /*
