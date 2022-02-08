@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
@@ -17,6 +17,7 @@ export class BidService {
   }
 
   getBidDetails(productId: string): Observable<any> {
-    return this.http.get(this.bidserviceUrl + productId);
+    const header=new HttpHeaders({"Ocp-Apim-Subscription-Key":"716ffdb13e604d07b4e18bc9bb3016db"});
+    return this.http.get(this.bidserviceUrl + productId,{headers:header});
   }
 }
