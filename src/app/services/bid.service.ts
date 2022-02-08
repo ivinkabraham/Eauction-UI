@@ -13,12 +13,12 @@ export class BidService {
   constructor(private http: HttpClient) { }
 
   getAllProducts() {
-    const header=new HttpHeaders({"Ocp-Apim-Subscription-Key":"716ffdb13e604d07b4e18bc9bb3016db"});
+    const header=new HttpHeaders({"Ocp-Apim-Subscription-Key":environment.apimSubscriprionKey});
     return this.http.get(this.productUrl,{headers:header});
   }
 
   getBidDetails(productId: string): Observable<any> {
-    const header=new HttpHeaders({"Ocp-Apim-Subscription-Key":"716ffdb13e604d07b4e18bc9bb3016db"});
+    const header=new HttpHeaders({"Ocp-Apim-Subscription-Key":environment.apimSubscriprionKey});
     return this.http.get(this.bidserviceUrl + productId,{headers:header});
   }
 }
